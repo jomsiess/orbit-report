@@ -9,6 +9,10 @@
    </tr>
    <!-- TODO: put <tr *ngFor=""></tr> here -->
    <tr *ngFor="let satellite of satellites">
-       {{ satellite.name }}, {{ satellite.type }}, {{ satellite.operational }}, {{ satellite.orbitType }}, {{ satellite.launchDate}}
+       <td>{{ satellite.name }}</td> 
+       <td>{{ satellite.type }}</td>
+       <td>{{ satellite.operational }}</td>
+       <td>{{ satellite.orbitType }}</td>
+       <td>{{ satellite.launchDate}}</td>
    </tr>
 </table>

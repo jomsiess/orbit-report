@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
 import { Satellite } from './satellite';  
 
-let sourceList: Satellite[];
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
+
+// let sourceList: Satellite[]; 
+
 export class AppComponent {
+  sourceList: Satellite[];
   constructor() { 
     this.sourceList = [
       new Satellite("SiriusXM", "Communication", "2009-03-21", "LOW", true),

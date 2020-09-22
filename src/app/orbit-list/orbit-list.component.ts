@@ -11,6 +11,7 @@ export class OrbitListComponent implements OnInit {
   constructor() { }
 
   @Input() satellites: Satellite[]; 
+  @Input() displayList: Satellite[]; 
 
   ngOnInit() {
   }

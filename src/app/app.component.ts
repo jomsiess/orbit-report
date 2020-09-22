@@ -17,12 +17,15 @@ export class AppComponent {
        response.json().then(function(data) {
  
           let fetchedSatellites = data.satellites;
-          for (let i = 0; i < fetchedSatellites.length; i++) { 
-            new Satellite(fetchedSatellites[i].name, fetchedSatellites[i].type, fetchedSatellites[i].launchDate, fetchedSatellites[i].orbitType, fetchedSatellites[i].operational); 
-            this.sourceList.push(Satellite); 
-          }
+            for (let i = 0; i < fetchedSatellites.length; i++) {
+              // fetchedSatellites[i]; 
+              let satellite = new Satellite(fetchedSatellites[i].name, fetchedSatellites[i].type, fetchedSatellites[i].launchDate, fetchedSatellites[i].orbitType, fetchedSatellites[i].operational);
+              this.sourceList.push(satellite); 
+            }
+ 
        }.bind(this));
     }.bind(this));
+ 
  }
 }
 // TODO: loop over satellites
